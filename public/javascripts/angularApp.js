@@ -130,11 +130,6 @@ app.config([
     });
   };
 
-  // o.delete = function(post) {
-  //   return $http.delete('/posts/' + post._id, null, {
-  //   });
-  // };
-
   o.delete = function(post) {
     return $http.delete('/post/' + post._id, post, {
       headers: {Authorization: 'Bearer '+auth.getToken()}
